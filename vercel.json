@@ -1,25 +1,16 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/next"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
-  ],
   "rewrites": [
     {
       "source": "/login",
-      "destination": "/login/"
+      "destination": "/login/index.html"
     },
     {
       "source": "/otp",
-      "destination": "/otp/"
+      "destination": "/otp/index.html"
+    },
+    {
+      "source": "/((?!api/).*)",
+      "destination": "/$1"
     }
   ]
 }
